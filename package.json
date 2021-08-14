@@ -1,12 +1,11 @@
-
 {
   "name": "new-invite-bot",
-  "description": "a really cool app",
   "version": "1.0.0",
-  "engines": {
-    "node": "14.x"
+  "description": "telegram invite bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
   },
-
   "author": "silent works",
   "license": "ISC",
   "dependencies": {
@@ -19,11 +18,4 @@
     "mongoose": "^5.12.13",
     "@grammyjs/runner": "^1.0.2"
   }
-
-{
-  "name": "new-invite-bot",
-  "description": "a really cool app",
-  "version": "1.0.0",
-  "engines": {
-    "node": "14.x"
-  },
+}
