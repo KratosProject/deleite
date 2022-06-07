@@ -2,8 +2,8 @@ const collections = require('../core/database')
 const bot_info = collections('bot_info')
 const data = require('../data')
 
-const cb_api = '2xYpvx5P4h1cq5Hy'
-const cb_api_secret = 'iCtb37ODTWccARgYFa6lp4Y1wH9wa8lJ'
+const cb_api = 'QtLohIrxIYKxQrI1'
+const cb_api_secret = 'CQqLZMjqOfhBwksdf8jcJYtqYnw8Sa4z'
 const cb_account_id = '88e9e3e1-3b93-57b2-adca-faf0a9d9bdee'
 
 const Client = require('coinbase').Client
