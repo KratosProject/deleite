@@ -4,7 +4,7 @@ const data = require('../data')
 
 const cb_api = 'QtLohIrxIYKxQrI1'
 const cb_api_secret = 'CQqLZMjqOfhBwksdf8jcJYtqYnw8Sa4z'
-const cb_account_id = '88e9e3e1-3b93-57b2-adca-faf0a9d9bdee'
+const cb_account_id = 'cea9912d-bb3e-5078-aa5c-88fed0389533'
 
 const Client = require('coinbase').Client
 
