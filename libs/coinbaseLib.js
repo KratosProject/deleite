@@ -2,10 +2,6 @@ const collections = require('../core/database')
 const bot_info = collections('bot_info')
 const data = require('../data')
 
-const cb_api = 'QtLohIrxIYKxQrI1'
-const cb_api_secret = 'CQqLZMjqOfhBwksdf8jcJYtqYnw8Sa4z'
-const cb_account_id = 'cea9912d-bb3e-5078-aa5c-88fed0389533'
-
 const Client = require('coinbase').Client
 
 
@@ -15,8 +11,8 @@ let api = keys.apiKey
 let secret = keys.secretKey
 try {
 var client = new Client({
-    apiKey: cb_api,
-    apiSecret: cb_api_secret,
+    apiKey: api,
+    apiSecret: secret,
     strictSSL: false
 });
 return client
@@ -41,9 +37,27 @@ throw new Error('bot database not set')
     return { apiKey: api, secretKey: secret}
 }
 
+var loadAccount_id = async() => {
+    var client = await createClient()
+    var account;
+    client.getAccount({}, function(err, accounts){
+        if(err){
+            throw new Error(err)
+        }
+for(var ind in accounts){
+account = accounts[ind]
+if(account.currecy.code == data.currency){ break }
+    }
+    })
+
+    return account.id
+}
+
 var create_witdrawal = async(amount, wallet, cur, bot_name) =>{
 var client = await createClient()
-client.getAccount(cb_account_id, function(err, account){
+var account = await loadAccount_id()
+
+client.getAccount(data.cb_account_id, function(err, account){
 
 var args = {
     'to':wallet,
