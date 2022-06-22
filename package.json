@@ -12,7 +12,7 @@
     "bull": "^3.22.4",
     "coinbase": "^2.0.8",
     "express": "^4.17.1",
-    "grammy": "^0.6.0",
+    "grammy": "^1.0.0",
     "loader": "^2.1.1",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.13",
